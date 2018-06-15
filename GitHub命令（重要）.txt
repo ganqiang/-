@@ -1,0 +1,11 @@
+//禁止自动转换
+git config --global core.autocrlf false
+
+//添加的文件 ---- XXX.XX：文件名字和后缀
+git add XXX.XX
+
+//给上面添加的文件做个备注 ---- XXX：做个备注
+git commit -m "XXX"
+
+//输入这句代码，完成代码上传
+git push origin master

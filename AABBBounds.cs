@@ -1,18 +1,25 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEditor;
+using UnityEditor;
 using UnityEngine;
 
 public class AABBBounds : MonoBehaviour
 {
 
-	void Start () {
-        Test();
-	}
-    void Test()
+    private Transform parent;
+
+    private void Start()
     {
-        Transform parent = UnityEditor.Selection.activeGameObject.transform;
+        parent = GameObject.Find("AABBBounds").transform;
+        Bounds();
+    }
+
+    /// <summary>
+    /// AABB包围盒
+    /// </summary>
+    private void Bounds()
+    {
         Vector3 postion = parent.position;
         Quaternion rotation = parent.rotation;
         Vector3 scale = parent.localScale;
